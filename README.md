@@ -16,7 +16,7 @@ Este es un sistema web para gestionar reservas de espacios de coworking. Permite
 ## Instalación y configuración  
 1️). **Descargar e instalar Apache Tomcat** (versión 8.5 o superior).  
 2). **Clonar este repositorio** o copiar los archivos en tu workspace.  
-3). ```sh
+3). ```
 4). git clone https://github.com/PvOur1/coworking.git
 5). cd coworking
 6). copiar el archivo coworking.war en la carpeta webapps de Tomcat
