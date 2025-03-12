@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro de Reservas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 flex justify-center items-center min-h-screen">
+
+    <div class="w-full max-w-md bg-white shadow-lg rounded-lg p-6">
+        <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">Registro de Reservas</h2>
+
+        <form action="ReservaServlet" method="post" class="space-y-4">
+            <!-- ingreso de nombre-->
+            <div class="mb-4">
+                <label for="nombre" class="block text-gray-700 font-semibold">Nombre de Usuario</label>
+                <input type="text" id="nombre" name="nombre" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <!-- fecha de reserva  -->
+            <div class="mb-4">
+                <label for="fecha" class="block text-gray-700 font-semibold">Fecha de Reserva</label>
+                <input type="date" id="fecha" name="fecha" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            <!--Espacio de trabajo seleccionado en opciones -->
+            <div class="mb-4">
+                <label for="espacio" class="block text-gray-700 font-semibold">Espacio de Trabajo</label>
+                <select id="espacio" name="espacio" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="Escritorio">Escritorio</option>
+                    <option value="Sala de reuniones">Sala de reuniones</option>
+                    <option value="Oficina Privada">Oficina Privada</option>
+                </select>
+            </div>
+            <!-- ingreso de horas reservadas -->
+            <div class="mb-4">
+                <label for="duracion" class="block text-gray-700 font-semibold">Duracion de la Reserva (horas)</label>
+                <input type="number" id="duracion" name="duracion" min="1" required class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+            </div>
+            
+            <!-- Botón de registro -->
+            <div class="text-center">
+                <button type="submit" class="w-full bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-200">
+                    Registrar Reserva
+                </button>
+            </div>
+
+            <!-- Botón para ver registros -->
+            <div class="text-center mt-4">
+                <a href="ListaReservaServlet" class="w-full bg-gray-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-gray-700 transition duration-200 inline-block text-center">
+                    Ver Registros
+                </a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
